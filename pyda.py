@@ -3,7 +3,15 @@ import wikipedia
 import wolframalpha
 import speech_recognition as sr
 import pyttsx3
+import socket
+hostname = socket.gethostname()
 
+def speakText(command):
+	engine = pyttsx3.init() 
+	engine.say(command) 
+	engine.runAndWait()
+
+speakText("Welcome "+hostname)
 class MyFrame(wx.Frame):
     def __init__(self):
         wx.Frame.__init__(self, None,
@@ -24,7 +32,6 @@ class MyFrame(wx.Frame):
         self.Show()
 
     def OnEnter(self, event):
-        engine = pyttsx3.init()
         input = self.txt.GetValue()
         input = input.lower()
         if input == '':
@@ -40,19 +47,18 @@ class MyFrame(wx.Frame):
         else:
             try:
                 #wolframalpha
-                app_id = "XXXXXXXXXXXXXXXXX"
+                app_id = "XXXXXXXXXXX"
                 client = wolframalpha.Client(app_id)
                 res = client.query(input)
-                answer = next(res.results).text
-                engine.say(answer)
+                answer = next(res.results).text               
                 print(answer)
+                speakText(answer)
             except:
                 #wikipedia
                 input = input.split(' ')
                 input = " ".join(input[2:])
-                engine.say(wikipedia.summary(input, sentences=2))
                 print(wikipedia.summary(input))
-        engine.runAndWait()
+                speakText(wikipedia.summary(input, sentences=2))
 
 if __name__ == "__main__":
     app =wx.App(True)
