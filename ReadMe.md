@@ -4,7 +4,7 @@ Tony is a digital assistant with speech recognition feature.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install packages.
 
 ```bash
 pip install wxPython
