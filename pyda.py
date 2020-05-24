@@ -41,9 +41,11 @@ class MyFrame(wx.Frame):
             try:
                 self.txt.SetValue(r.recognize_google(audio))
             except sr.UnknownValueError:
-                print("Google Speech Recognition could not understand audio")
+                print("Google Speech Recognition could not understand audio \n")
+                speakText("Google Speech Recognition could not understand audio")
             except sr.RequestError as e:
-                print("Could not request results from Google Speech Recognition service; {0}".format(e))
+                print("Could not request results from Google Speech Recognition service; {0}".format(e)+"\n")
+                speakText("Could not request results from Google Speech Recognition service")
         else:
             try:
                 #wolframalpha
@@ -54,12 +56,16 @@ class MyFrame(wx.Frame):
                 print(answer+"\n\n")
                 speakText(answer)
             except:
-                #wikipedia
-                input = input.split(' ')
-                input = " ".join(input[2:])
-                print(wikipedia.summary(input)+"\n\n")
-                speakText(wikipedia.summary(input, sentences=2))
-
+                try:
+                    #wikipedia
+                    input = input.split(' ')
+                    input = " ".join(input[2:])
+                    print(wikipedia.summary(input)+"\n\n")
+                    speakText(wikipedia.summary(input, sentences=2))
+                except:
+                    print("Exception: Invalid input \n")
+                    speakText("Exception: Invalid input")
+                    
 if __name__ == "__main__":
     app =wx.App(True)
     frame = MyFrame()
