@@ -51,13 +51,13 @@ class MyFrame(wx.Frame):
                 client = wolframalpha.Client(app_id)
                 res = client.query(input)
                 answer = next(res.results).text               
-                print(answer)
+                print(answer+"\n\n")
                 speakText(answer)
             except:
                 #wikipedia
                 input = input.split(' ')
                 input = " ".join(input[2:])
-                print(wikipedia.summary(input))
+                print(wikipedia.summary(input)+"\n\n")
                 speakText(wikipedia.summary(input, sentences=2))
 
 if __name__ == "__main__":
