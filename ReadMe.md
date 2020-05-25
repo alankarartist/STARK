@@ -1,6 +1,6 @@
-# Tony - Personal Digital Assistant
+# STARK - Personal Digital Assistant
 
-Tony is a digital assistant with speech recognition feature.
+STARK is a digital assistant with speech recognition feature.
 
 ## Installation
 
