@@ -18,11 +18,11 @@ class MyFrame(wx.Frame):
             pos=wx.DefaultPosition, size=wx.Size(425, 100),
             style=wx.MINIMIZE_BOX | wx.SYSTEM_MENU | wx.CAPTION |
              wx.CLOSE_BOX | wx.CLIP_CHILDREN,
-            title="TONY")
+            title="STARK")
         panel = wx.Panel(self)
         my_sizer = wx.BoxSizer(wx.VERTICAL)
         lbl = wx.StaticText(panel,
-        label="TONY Personal Digital Assistant is here. How can I help you?")
+        label="STARK Personal Digital Assistant is here. How can I help you?")
         my_sizer.Add(lbl, 0, wx.ALL, 5)
         self.txt = wx.TextCtrl(panel, style=wx.TE_PROCESS_ENTER,size=(400,30))
         self.txt.SetFocus()
