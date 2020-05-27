@@ -7,7 +7,7 @@ STARK is a digital assistant with speech recognition feature.
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install packages.
 
 ```bash
-pip install wxPython
+pip install PyQt5
 pip install wikipedia
 pip install wolframalpha
 pip install SpeechRecognition
