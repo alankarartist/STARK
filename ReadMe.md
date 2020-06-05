@@ -1,6 +1,6 @@
-# STARK - Personal Digital Assistant
+# STARK
 
-STARK is a digital assistant with speech recognition feature.
+STARK is a digital query solver assistant with speech recognition feature.
 
 ## Installation
 
