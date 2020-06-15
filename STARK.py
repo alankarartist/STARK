@@ -31,7 +31,7 @@ def saysomething():
         myline.setText(r.recognize_google(audio))
         myacction()
     except:
-        print("Google Speech Recognition Could not understand auido")
+        print("Google Speech Recognition Could not understand audio")
 
 def myacction():
     input = myline.text()
