@@ -37,7 +37,7 @@ def myacction():
     input = myline.text()
     if len(input) >= 1:
         try:
-            myappid= wolframalpha.Client('QHR7WJ-52AL3EQWU4')
+            myappid= wolframalpha.Client('XXXXXXXXXXXXXXXXXX')
             res = myappid.query(input)
             ans = next(res.results).text
             l1.setText(ans)
