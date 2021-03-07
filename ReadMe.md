@@ -21,4 +21,4 @@ pip install PyAudio
 
 ![](/STARK.JPG)
 
-1. Click on SPEAK and ask you queries or say the name you want to search on wikipedia.
+1. First change the API Key in line 40, and then click on SPEAK and ask you queries or say the name you want to search on wikipedia.
