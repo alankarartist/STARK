@@ -8,13 +8,16 @@ import speech_recognition as sr
 import pyttsx3
 import sys
 import socket
-hostname = socket.gethostname()
+import os
 
+hostname = socket.gethostname()
+cwd = os.path.dirname(os.path.realpath(__file__))
 app= QApplication(sys.argv)
 win=QMainWindow()
 win.setStyleSheet('background-color:#000000;')
 win.setFixedSize(710,410)
-win.setWindowTitle("Stark")
+win.setWindowTitle("STARK")
+win.setWindowIcon(QIcon(os.path.join(cwd+'\\UI\\icons', 'stark.jfif')))
 
 def speakText(command):
 	engine = pyttsx3.init() 
