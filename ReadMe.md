@@ -22,3 +22,9 @@ pip install PyAudio
 ![](/STARK.JPG)
 
 1. First change the API Key in line 40, and then click on SPEAK and ask you queries or say the name you want to search on wikipedia.
+
+## Contributor
+
+<a href="https://github.com/alankarartist/STARK/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=alankarartist/STARK" />
+</a>
